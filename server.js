@@ -87,6 +87,14 @@ app.get('/updateuserselections/:eventname/:vcontact/:ucontact', (req, res) => {
         res.status(500).send('Internal Server Error');
       });
   });
+
+app.get('/getuser/:contact',(req,res)=>{
+  const contact = req.params.contact
+  userModel.find().then(async(users)=>{
+   const data = await users.find((user)=> user.contact=== contact);
+   res.send(data.vendorSelections)
+  })
+})
   
   
   
