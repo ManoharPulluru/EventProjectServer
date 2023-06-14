@@ -95,6 +95,8 @@ app.get('/getuser/:contact',(req,res)=>{
   userModel.find().then(async(users)=>{
    const data = await users.find((user)=> user.contact=== contact);
    res.send(data.vendorSelections)
+  }).catch((err)=>{
+    console.log(err)
   })
 })
   
