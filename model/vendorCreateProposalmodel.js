@@ -10,7 +10,7 @@ const vendorCreateModel = mongoose.Schema(
       from: String,
       to: String,
       description: String,
-      images: String,
+      images: Array,
       foodPreferences: String,
       events: String
     }
