@@ -22,7 +22,7 @@ const getglobaldata = require('./userData/getGlobalData');
 const getGlobalDataByEvNameNContact = require('./userData/getGlobalDataByEvNameNContact');
 app.use(express.json());
 app.use(cors());
-app.listen('https://eventbackend-2hj4.onrender.com', () => {
+app.listen(3300, () => {
     console.log('Running on port 3300');
 })
 
